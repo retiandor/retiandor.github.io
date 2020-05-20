@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Varrás</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="formazas.css">
+
+</head>
+
+<body>
+    <div class="tartalom">
+
+        <div class="navigacio-keret">
+
+            <div class="baloldal">
+
+                <div class="navigacio-link-keret">
+                    <a href="index.html">kezdőlap</a>
+                </div>
+
+                <div class="navigacio-link-keret">
+                    <a href="cipokeszites.html">cipő</a>
+                </div>
+
+                <div class="navigacio-link-keret  aktiv-link">
+                    <a href="nadragvarras.html">nadrág</a>
+                </div>
+
+                <div class="navigacio-link-keret">
+                    <a href="whiskyfozes.html">whisky</a>
+                </div>
+
+            </div>
+        
+            <div class="jobboldal">
+
+                <div class="nevjegy">
+                    <div>Réti Andor portfólió weboldal</div>
+                </div>
+                    
+            </div>
+
+        </div>
+
+        <div class="portfolio-keret">  <!--minden ami a navigáció alatt van-->
+            
+                <div class="haromszorketsor">
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/varras/szabas.jpg);"></div>
+                        <div class="szoveg">A precíz szabás elengedhetetlen a szép végtermékhez!</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/varras/zsebvarras.jpg);"></div>
+                        <div class="szoveg">A farzseb elhelyezésére kemény papírból sablont alkottam, és egy aranyröggel rögzítem az anyagot</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        <div class="projektleiras">
+                            <h1>Varrás</h1>
+                            <p> 11. osztályban egy jó barátommal
+                                közös érdeklődésünk hatására kezdtem el szabni és varrni is, ami azóta is folyamatos
+                                hobbim, az egyik kedvenc kikapcsolódásom, hosszú lábaim miatt azóta csak saját
+                                nadrágokban járok.  </p>
+
+                        </div>
+                    </div>
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/varras/derekvarras.jpg);"></div>
+                        <div class="szoveg">Itt a nadrág derékrészét varrom, régen nem szerettem, de mostmár az egyik kedvenc részem</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        <div class="kep" style="background-image: url(kepek/varras/nadragvarras.jpg);"></div>
+                        <div class="szoveg">Már csak az övtartók második varrása van hátra</div>
+                        
+                    </div>
+
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/varras/varrogep.jpg);"></div>
+                        <div class="szoveg">Ez a varrógépen, egy Janome HD 3000-es, kiváló darab, csak ajánlani tudom!</div>
+                        
+                    </div>
+
+           
+
+                </div>
+
+            
+        </div>
+
+    </div>
+
+</body>
+<script>                                                                          
+    const portfolioItems = document.querySelectorAll('.racs');
+
+    portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.remove('kep-vilagosito');
+            portfolioItem.childNodes[1].classList.add('kep-sotetito');
+        });
+
+        portfolioItem.addEventListener('mouseout', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.add('kep-vilagosito')
+            portfolioItem.childNodes[1].classList.remove('kep-sotetito');
+        });
+    });
+    
+</script>
+</html>

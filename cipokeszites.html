@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Cipőkészítés</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="formazas.css">
+
+</head>
+
+<body>
+    <div class="tartalom">
+
+        <div class="navigacio-keret">
+
+            <div class="baloldal">
+
+                <div class="navigacio-link-keret">
+                    <a href="index.html">kezdőlap</a>
+                </div>
+
+                <div class="navigacio-link-keret aktiv-link">
+                    <a href="cipokeszites.html">cipő</a>
+                </div>
+
+                <div class="navigacio-link-keret">
+                    <a href="nadragvarras.html">nadrág</a>
+                </div>
+
+                <div class="navigacio-link-keret">
+                    <a href="whiskyfozes.html">whisky</a>
+                </div>
+
+            </div>
+        
+            <div class="jobboldal">
+
+                <div class="nevjegy">
+                    <div>Réti Andor portfólió weboldal</div>
+                </div>
+                    
+            </div>
+
+        </div>
+
+        <div class="portfolio-keret">  <!--minden ami a navigáció alatt van-->
+            
+                <div class="haromszorketsor">
+
+                    <div class="racs">
+                        <div class="kep" style="background-image: url(kepek/cipo/cipoalapanyag2.jpg);"></div>
+                        <div class="szoveg">Ezek a szerszámok és alapanyagok szükségesek a cipőkészítéshez</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/cipo/szabasminta2.jpg);"></div>
+                        <div class="szoveg">Így készül a cipő szabásmintája</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/cipo/szabasminta4.jpg);"></div>
+                        <div class="szoveg">Itt a bőrből kiszabom a szükséges alkatrészeket</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        <div class="projektleiras">
+                            <h1>Cipőkészítés</h1>
+                            <p>Gimnázium első nyarán
+                                készítettem el az első kézzel varrott cipőmet, rámán varrott technikával, mert nagyon
+                                izgalmasnak tartottam a kézzel varrott bőrcipők világát. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/cipo/cipofelkesz.jpg);"></div>
+                        <div class="szoveg">Ez a cipő két fő komponense összevarrás előtt</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/cipo/keszcipo2.jpg);"></div>
+                        <div class="szoveg">Az elkészült cipő <br> (a talpszél viaszolása még hátravan)</div>
+                        
+                    </div>
+
+                    
+
+                    
+
+                    
+
+
+                </div>
+
+            
+        </div>
+
+    </div>
+
+</body>
+<script>                                                                          
+    const portfolioItems = document.querySelectorAll('.racs');
+
+    portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.remove('kep-vilagosito');
+            portfolioItem.childNodes[1].classList.add('kep-sotetito');
+        });
+
+        portfolioItem.addEventListener('mouseout', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.add('kep-vilagosito')
+            portfolioItem.childNodes[1].classList.remove('kep-sotetito');
+        });
+    });
+    
+</script>
+</html>

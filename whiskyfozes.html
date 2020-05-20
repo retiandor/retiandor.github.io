@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Whisky készítés</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="formazas.css">
+
+</head>
+
+<body>
+    <div class="tartalom">
+
+        <div class="navigacio-keret">
+
+            <div class="baloldal">
+
+                <div class="navigacio-link-keret">
+                    <a href="index.html">kezdőlap</a>
+                </div>
+
+                <div class="navigacio-link-keret">
+                    <a href="cipokeszites.html">cipő</a>
+                </div>
+
+                <div class="navigacio-link-keret">
+                    <a href="nadragvarras.html">nadrág</a>
+                </div>
+
+                <div class="navigacio-link-keret  aktiv-link">
+                    <a href="whiskyfozes.html">whisky</a>
+                </div>
+
+            </div>
+        
+            <div class="jobboldal">
+
+                <div class="nevjegy">
+                    <div>Réti Andor portfólió weboldal</div>
+                </div>
+                    
+            </div>
+
+        </div>
+
+        <div class="portfolio-keret">  <!--minden ami a navigáció alatt van-->
+            
+                <div class="haromszorketsor">
+
+                    <div class="racs">
+                        <div class="kep" style="background-image: url(kepek/viszki/blend1.jpg);"></div>
+                        <div class="szoveg">A blendek pontos feliratozásában nem ismerünk tréfát</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/viszki/blend4.jpg);"></div>
+                        <div class="szoveg">Ilyen a whisky közvetlen blendelés után, amikor belerakjuk az érlelőkockákat</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/viszki/blend6.jpg);"></div>
+                        <div class="szoveg">Ilyen pedig pár hónap múlva, eddigre a moonshine-unknak hordóban érlelt zamata lesz!</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        <div class="projektleiras">
+                            <h1>Whisk(e)y készítés</h1>
+                            <p>Szintén 11. osztályban kezdtük el másik nagyon jó barátommal a
+                                saját whisky- és sörfőzést, ha időnk engedi ezt a hobbinkat azóta is űzzük.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/viszki/koszosleparlo.jpg);"></div>
+                        <div class="szoveg">Ajjaj hát itt meg mi történt...</div>
+                        
+                    </div>
+
+                    <div class="racs">
+                        
+                        <div class="kep" style="background-image: url(kepek/viszki/leparloteljes.jpg);"></div>
+                        <div class="szoveg">A lepárlás napján ilyen kis 'üzemmé' alakítjuk a konyhát, a képen ráadásul egyszerre készül sör és whisky is!</div>
+                        
+                    </div>
+
+                    
+
+                    
+
+                    
+
+
+                </div>
+
+            
+        </div>
+
+    </div>
+
+</body>
+<script>                                                                          
+    const portfolioItems = document.querySelectorAll('.racs');
+
+    portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.remove('kep-vilagosito');
+            portfolioItem.childNodes[1].classList.add('kep-sotetito');
+        });
+
+        portfolioItem.addEventListener('mouseout', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.add('kep-vilagosito')
+            portfolioItem.childNodes[1].classList.remove('kep-sotetito');
+        });
+    });
+    
+</script>
+</html>

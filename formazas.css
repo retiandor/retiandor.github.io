@@ -1,0 +1,244 @@
+/*általános formázás*/
+
+body{
+    font-family: 'Jost', sans-serif;
+    margin: 0px;
+}
+
+.tartalom{
+    display: grid;
+    grid-template-columns:  1fr;
+}
+
+/*navigacio formazas*/
+.navigacio-keret{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.baloldal{display: flex;}
+.jobboldal{
+    text-transform: uppercase;
+    font-size: 1.7em;
+    color: #27ae86;
+}
+
+.navigacio-keret>.baloldal>div{
+    margin-right: 70px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    
+}
+
+.navigacio-link-keret{
+    height: 30px;
+    border-bottom: 2px solid lightgrey;
+    transition: border-bottom 0.5s;
+}
+
+.navigacio-link-keret a {
+    color: #27ae86;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.navigacio-link-keret:hover{
+    border-bottom: 2px solid darkgray;
+}
+
+.navigacio-link-keret a:hover{
+    color: darkgray;
+}
+
+.aktiv-link{
+    border-bottom: 2px solid darkgray ;
+}
+
+.aktiv-link a{
+    color: darkgray !important;
+}
+
+/*_____________________________________________________________________________________________________________________________________________________________________*/
+
+/*portfolio formazas*/
+
+    /*távtartó formázás*/
+
+    .tavtarto{
+        height: 170px;
+        position: relative;
+    }
+
+    .tavtarto>div{
+        
+        
+        left: 50%;
+        transform: translate(-50%, 0%);
+        
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+        align-items: center;   
+        height: 100%;
+        text-align: center;
+        
+        font-size: 1.3em;
+        color: darkgray;
+    }
+
+
+
+.portfolio-csoport{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-egyes{
+    position: relative;
+}
+
+.portfolio-kep-hatter{
+    
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+}
+
+.kep-szoveg-keret{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;   
+    height: 100%;
+    text-align: center;
+    padding-right: 100px;
+    padding-left: 100px;
+    
+
+}
+
+.kep-szoveg-keret:hover .kep-szoveg a{
+    font-weight: 800;
+    font-size: 2em;
+    color: #27ae86;
+    text-decoration: none;
+    
+}
+
+.kep-szoveg-keret .kep-szoveg a{
+    font-weight: 800;
+    font-size: 2em;
+    transition: 1s;
+    color: transparent;
+    text-decoration: none;
+    
+}
+
+.kep-sotetito{
+    transition: 1s;
+    filter: brightness(20%);
+    
+}
+
+.kep-vilagosito{
+    transition: 1s;
+    filter: brightness(100%);
+}
+
+/*_____________________________________________________________________________________________________________________________________________________________________*/
+
+/*cipo oldal*/
+
+.haromszorketsor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 0px;
+}
+
+.racs{
+    position: relative;
+    padding-top: 0px; /*sehogy se sikerül azt a vékony csíkot eltüntetnem a két sor közül :((*/
+    
+}
+
+.racs img{
+    
+    height: 350px;
+    width: 100%;
+    
+}
+
+.kep{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+}
+
+
+.szoveg{
+
+    left: 50%;
+    transform: translate(-50%, 0%);
+        
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;   
+    height: 100%;
+    text-align: center;
+
+    font-weight: 800;
+    font-size: 2em;
+    transition: 1s;
+    color: transparent;
+}
+
+.racs:hover .szoveg{
+
+    left: 50%;
+    transform: translate(-50%, 0%);
+        
+    position: absolute;        
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;   
+    height: 100%;
+    text-align: center;
+
+    font-weight: 800;
+    font-size: 2em;
+    color: #27ae86;
+    
+}
+
+.projektleiras{
+    padding: 20px;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
+.projektleiras h1{
+    font-weight: 400;
+    font-size: 2em;
+    color: #27ae86;
+}
+
+.projektleiras p{
+    font-size: 1.3em;
+    color: darkgray;
+}
+

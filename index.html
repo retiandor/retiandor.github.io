@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Kezdőlap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="formazas.css">
+
+</head>
+
+<body>
+    <div class="tartalom">
+
+        <div class="navigacio-keret">
+
+            <div class="baloldal">
+
+                <div class="navigacio-link-keret aktiv-link">
+                    <a href="index.html">kezdőlap</a>
+                </div>
+
+                <div class="navigacio-link-keret">
+                    <a href="cipokeszites.html">cipő</a>
+                </div>
+
+                <div class="navigacio-link-keret">
+                    <a href="nadragvarras.html">nadrág</a>
+                </div>
+
+                <div class="navigacio-link-keret">
+                    <a href="whiskyfozes.html">whisky</a>
+                </div>
+
+            </div>
+        
+            <div class="jobboldal">
+
+                <div class="nevjegy">
+                    <div>Réti Andor portfólió weboldal</div>
+                </div>
+                    
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="portfolio-keret">  <!--minden ami a navigáció alatt van-->
+
+            <div class="tavtarto">
+                <div>Réti Andor vagyok, szeretek cipőt készíteni, nadrágot varrni és whiskyt főzni.</div>
+            </div>  <!--azért itt hogy a háttér ne legyen a navigációs sávban-->
+
+
+            <div class="portfolio-csoport">
+
+                <div class="portfolio-egyes">
+                    <div class="portfolio-kep-hatter" style="background-image:url(kepek/cipohatter.jpg)"></div>
+
+                    <div class="kep-szoveg-keret">
+                        <div class="kep-szoveg">
+                                <a href="cipokeszites.html">Ide kattintva megnézheted a cipőkészítős projektemet</a>
+                         </div>
+                    </div>
+                    
+                </div>
+
+                <div class="portfolio-egyes">
+                    <div class="portfolio-kep-hatter" style="background-image:url(kepek/varrashatter.jpg)"></div>
+
+                    <div class="kep-szoveg-keret">
+                        <div class="kep-szoveg">
+                             <a href="nadragvarras.html">Ide kattintva a nadrág varrós projektemről olvashatsz</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="portfolio-egyes">
+                    <div class="portfolio-kep-hatter" style="background-image:url(kepek/viszkihatter.jpg)"></div>
+
+                    <div class="kep-szoveg-keret">
+                        <div class="kep-szoveg">
+                            <a href="whiskyfozes.html">Itt pedig a moonshiner életemet láthatod</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<!--a javascript részét egy külső megoldásból emeltem be, amit a youtube-on láttam-->
+<script>                                                                          
+    const portfolioItems = document.querySelectorAll('.portfolio-egyes');
+
+    portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.remove('kep-vilagosito');
+            portfolioItem.childNodes[1].classList.add('kep-sotetito');
+        });
+
+        portfolioItem.addEventListener('mouseout', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.add('kep-vilagosito')
+            portfolioItem.childNodes[1].classList.remove('kep-sotetito');
+        });
+    });
+    
+</script>
+
+</html>
